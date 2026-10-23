@@ -1,0 +1,110 @@
+[
+  {
+    "id": "PF01",
+    "funcionalidad": "Inicio",
+    "estado": "SUPERADA",
+    "detalle": "Ventana creada con 4 páginas; página visible al arrancar: paginaInicio"
+  },
+  {
+    "id": "PF02",
+    "funcionalidad": "Navegación",
+    "estado": "SUPERADA",
+    "detalle": "Secuencia recorrida: paginaFormulario -> paginaListado -> paginaInicio -> paginaResumen"
+  },
+  {
+    "id": "PF03",
+    "funcionalidad": "Alta válida",
+    "estado": "SUPERADA",
+    "detalle": "Registro creado: True; confirmación mostrada: True; resumen visible: True; formulario limpio tras alta: True; aparece en la tabla: True"
+  },
+  {
+    "id": "PF04",
+    "funcionalidad": "Validación",
+    "estado": "SUPERADA",
+    "detalle": "Botón Guardar desactivado: True; mensaje mostrado: 'Revisa los datos obligatorios (nombre, correo, ciclo, actividad y condiciones)'; registro no guardado: True"
+  },
+  {
+    "id": "PF05",
+    "funcionalidad": "Validación",
+    "estado": "SUPERADA",
+    "detalle": "Correo 'alumno@centro' detectado como inválido: True; registro no guardado: True"
+  },
+  {
+    "id": "PF06",
+    "funcionalidad": "Búsqueda",
+    "estado": "SUPERADA",
+    "detalle": "Filtro 'ana' -> 1 fila(s) ('Ana Torres'); contador: 'Total: 1 inscripción'"
+  },
+  {
+    "id": "PF07",
+    "funcionalidad": "Búsqueda",
+    "estado": "SUPERADA",
+    "detalle": "Filtro sin coincidencias -> 0 filas; contador: 'Total: 0 inscripciones'; la aplicación sigue operativa: True"
+  },
+  {
+    "id": "PF08",
+    "funcionalidad": "Búsqueda",
+    "estado": "SUPERADA",
+    "detalle": "Con filtro: 1 fila; tras limpiar búsqueda: 3 filas; contador: 'Total: 3 inscripciones'"
+  },
+  {
+    "id": "PF09",
+    "funcionalidad": "Edición",
+    "estado": "SUPERADA",
+    "detalle": "Formulario abierto: True; datos cargados: True; registros tras guardar (sin duplicar): 3; primera fila actualizada: True; informa al usuario: True"
+  },
+  {
+    "id": "PF10",
+    "funcionalidad": "Edición",
+    "estado": "SUPERADA",
+    "detalle": "Aviso mostrado: True; ningún registro modificado: True; permanece en el listado: True"
+  },
+  {
+    "id": "PF11",
+    "funcionalidad": "Eliminación",
+    "estado": "SUPERADA",
+    "detalle": "Registros tras cancelar: 3 (esperados 3)"
+  },
+  {
+    "id": "PF12",
+    "funcionalidad": "Eliminación",
+    "estado": "SUPERADA",
+    "detalle": "Registros restantes: 2; nombres: ['Ana Torres', 'Carla Ruiz']; filas en tabla: 2; mensaje de confirmación: True"
+  },
+  {
+    "id": "PF13",
+    "funcionalidad": "Edición/Eliminación con filtro",
+    "estado": "SUPERADA",
+    "detalle": "Con filtro 'carla' se eliminó la fila 0 de la tabla; registros restantes: ['Ana Torres', 'Bruno Diaz']"
+  },
+  {
+    "id": "PF14",
+    "funcionalidad": "Formulario",
+    "estado": "SUPERADA",
+    "detalle": "Valor mínimo permitido: 1; valor máximo permitido: 30"
+  },
+  {
+    "id": "PF15",
+    "funcionalidad": "Teclado",
+    "estado": "SUPERADA",
+    "detalle": "Tras Tab desde Nombre el foco va a txtCorreo; Intro activa Guardar (botón por defecto): True"
+  },
+  {
+    "id": "PF16",
+    "funcionalidad": "Redimensionado",
+    "estado": "SUPERADA",
+    "detalle": "Título de la ventana: 'Gestor de Actividades Formativas'; tamaño mínimo: 640x520"
+  },
+  {
+    "id": "PF17",
+    "funcionalidad": "Teclado (Esc)",
+    "estado": "SUPERADA",
+    "detalle": "Modo edición activado: True; edición cancelada con Esc: True; vuelve al listado: True; registro intacto: True"
+  },
+  {
+    "id": "PF18",
+    "funcionalidad": "Validación (nombre)",
+    "estado": "SUPERADA",
+    "detalle": "Guardar desactivado con nombre numérico: True; aviso específico sobre números: True; ningún registro creado: True"
+  }
+]

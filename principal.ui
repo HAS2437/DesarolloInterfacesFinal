@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VentanaPrincipal</class>
+ <widget class="QMainWindow" name="VentanaPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>860</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Gestor de Actividades Formativas</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QStackedWidget" name="stackedPaginas">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="paginaInicio">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="LayoutInicio">
+          <item>
+           <spacer name="verticalSpacerSuperior">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblTituloInicio">
+            <property name="text">
+             <string>Gestor de Actividades Formativas</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblDescripcionInicio">
+            <property name="text">
+             <string>Registra la participación del alumnado en las actividades del centro</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnComenzar">
+            <property name="text">
+             <string>Comenzar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacerInferior">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="paginaFormulario">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="lblTituloFormulario">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>UpArrowCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Formulario de matrícula</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblSubtitulo">
+          <property name="text">
+           <string>Completa los datos para continuar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayoutDatos">
+          <property name="verticalSpacing">
+           <number>6</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblNombre">
+            <property name="text">
+             <string>&amp;Nombre:</string>
+            </property>
+            <property name="buddy">
+             <cstring>txtNombre</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="txtNombre">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Nombre completo</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblCorreo">
+            <property name="text">
+             <string>&amp;Correo:</string>
+            </property>
+            <property name="buddy">
+             <cstring>txtCorreo</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="txtCorreo">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>correo@ejemplo.com</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QDateEdit" name="dateFecha">
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="lblFecha">
+            <property name="text">
+             <string>&amp;Fecha:</string>
+            </property>
+            <property name="buddy">
+             <cstring>dateFecha</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QSpinBox" name="spinParticipantes">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>30</number>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="lblParticipantes">
+            <property name="text">
+             <string>Participantes:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblCiclo">
+            <property name="text">
+             <string>&amp;Ciclo:</string>
+            </property>
+            <property name="buddy">
+             <cstring>cmbCiclo</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="cmbCiclo">
+            <item>
+             <property name="text">
+              <string>Selecciona un ciclo</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desarrollo de Aplicaciones Multiplataforma</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desarrollo de Aplicaciones Web</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Administración de Sistemas Informáticos en Red</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sistemas Microinformáticos y Redes</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblActividad">
+            <property name="text">
+             <string>&amp;Actividad:</string>
+            </property>
+            <property name="buddy">
+             <cstring>cmbActividad</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="cmbActividad">
+            <item>
+             <property name="text">
+              <string>Selecciona una actividad</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Desarrollo de Interfaces</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Programación con Python</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bases de datos</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Inteligencia Artificial</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ciberseguridad</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QFrame" name="groupModalidad">
+          <property name="frameShape">
+           <enum>QFrame::Shape::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Shadow::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QRadioButton" name="radioPresencial">
+             <property name="text">
+              <string>Presencial</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="layoutModalidad">
+             <item>
+              <widget class="QRadioButton" name="radioOnline">
+               <property name="text">
+                <string>Online</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chkMaterial">
+          <property name="text">
+           <string>Material</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="txtObservaciones">
+          <property name="plainText">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>Observaciones</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chkCondiciones">
+          <property name="text">
+           <string>Acepto las condiciones de participación</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblEstado">
+          <property name="text">
+           <string>Completa los datos obligatorios</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layoutBotonesFormulario">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>208</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLimpiar">
+            <property name="toolTip">
+             <string>Borra todos los campos</string>
+            </property>
+            <property name="text">
+             <string>Limpiar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnRegistrar">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="toolTip">
+             <string>Guarda la matrícula</string>
+            </property>
+            <property name="text">
+             <string>Guardar</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="paginaResumen">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QFormLayout" name="formLayoutResumen">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblResumenNombre">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblResumenCorreo">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblResumenCiclo">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lblResumenActividad">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="lblResumenFecha">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="lblResumenParticipantes">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="lblResumenModalidad">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="lblResumenMaterial">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="lblResumenObservaciones">
+            <property name="text">
+             <string>TextLabel</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layoutBotonesResumen">
+          <item>
+           <widget class="QPushButton" name="btnNueva">
+            <property name="text">
+             <string>Nueva Inscripción</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnVerTodas">
+            <property name="text">
+             <string>Ver todas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnInicio">
+            <property name="text">
+             <string>Volver al Inicio</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="paginaListado">
+       <layout class="QVBoxLayout" name="verticalLayoutListado">
+        <item>
+         <widget class="QLabel" name="lblTituloListado">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Listado de inscripciones</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layoutBusqueda">
+          <item>
+           <widget class="QLabel" name="lblBuscar">
+            <property name="text">
+             <string>Buscar:</string>
+            </property>
+            <property name="buddy">
+             <cstring>txtBuscar</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txtBuscar">
+            <property name="toolTip">
+             <string>Filtra por nombre, correo o actividad</string>
+            </property>
+            <property name="placeholderText">
+             <string>Nombre, correo o actividad</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnLimpiarBusqueda">
+            <property name="text">
+             <string>Limpiar búsqueda</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tablaInscripciones">
+          <property name="editTriggers">
+           <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <set>QAbstractItemView::SelectionBehavior::SelectRows</set>
+          </property>
+          <property name="selectionMode">
+           <set>QAbstractItemView::SelectionMode::SingleSelection</set>
+          </property>
+          <property name="columnCount">
+           <number>7</number>
+          </property>
+          <column>
+           <property name="text">
+            <string>Nombre</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Correo</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Ciclo</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Actividad</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Fecha</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Participantes</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Modalidad</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblContadorListado">
+          <property name="text">
+           <string>Total: 0 inscripciones</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="layoutBotonesListado">
+          <item>
+           <spacer name="horizontalSpacerListado">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnNuevaListado">
+            <property name="text">
+             <string>Nueva Inscripción</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnEditarListado">
+            <property name="toolTip">
+             <string>Carga la fila seleccionada en el formulario</string>
+            </property>
+            <property name="text">
+             <string>Editar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnEliminarListado">
+            <property name="toolTip">
+             <string>Elimina la fila seleccionada</string>
+            </property>
+            <property name="text">
+             <string>Eliminar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnInicioListado">
+            <property name="text">
+             <string>Volver al Inicio</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>860</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionNueva"/>
+    <addaction name="actionListado"/>
+    <addaction name="actionInicio"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcercaDe"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <action name="actionNueva">
+   <property name="text">
+    <string>Nueva inscripción</string>
+   </property>
+   <property name="statusTip">
+    <string>Abre un formulario de inscripción vacío</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionListado">
+   <property name="text">
+    <string>Ver listado</string>
+   </property>
+   <property name="statusTip">
+    <string>Muestra el listado de inscripciones</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionInicio">
+   <property name="text">
+    <string>Ir al inicio</string>
+   </property>
+   <property name="statusTip">
+    <string>Muestra la página de Inicio</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="statusTip">
+    <string>Cierra la aplicación</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAcercaDe">
+   <property name="text">
+    <string>Acerca de</string>
+   </property>
+   <property name="statusTip">
+    <string>Muestra información sobre la aplicación</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>txtNombre</tabstop>
+  <tabstop>txtCorreo</tabstop>
+  <tabstop>cmbCiclo</tabstop>
+  <tabstop>cmbActividad</tabstop>
+  <tabstop>dateFecha</tabstop>
+  <tabstop>spinParticipantes</tabstop>
+  <tabstop>radioPresencial</tabstop>
+  <tabstop>radioOnline</tabstop>
+  <tabstop>chkMaterial</tabstop>
+  <tabstop>txtObservaciones</tabstop>
+  <tabstop>chkCondiciones</tabstop>
+  <tabstop>btnLimpiar</tabstop>
+  <tabstop>btnRegistrar</tabstop>
+  <tabstop>btnNueva</tabstop>
+  <tabstop>btnVerTodas</tabstop>
+  <tabstop>btnInicio</tabstop>
+  <tabstop>txtBuscar</tabstop>
+  <tabstop>btnLimpiarBusqueda</tabstop>
+  <tabstop>tablaInscripciones</tabstop>
+  <tabstop>btnNuevaListado</tabstop>
+  <tabstop>btnEditarListado</tabstop>
+  <tabstop>btnEliminarListado</tabstop>
+  <tabstop>btnInicioListado</tabstop>
+  <tabstop>btnComenzar</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
